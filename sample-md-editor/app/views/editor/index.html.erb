@@ -1,0 +1,15 @@
+<h1>簡易Markdownエディタ</h1>
+<%= form_tag('/editor/index', method: 'get' ) do %>
+    <%= submit_tag('変換') %>
+    <div class = "main" >
+        <div id = "editor" >
+        <%= text_area_tag('text', @text) %>
+        </div>
+
+        <div id="preview">
+        <ul>
+        <%= raw @html %>
+        </ul>
+        </div>
+    </div>
+<% end %>
